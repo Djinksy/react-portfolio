@@ -1,7 +1,6 @@
 import Education from "./components/Education";
-import Programming from "./Progamming";
-import Projects from "./Projects";
-import Work from "./Work";
+import Projects from "./components/Projects";
+import Work from "./components/Work";
 import "./assests/styles.css";
 import { useState } from "react";
 import Contact from "./components/Contact";
@@ -174,9 +173,6 @@ export default function App() {
               <span class="icons-span">
                 <i class="fas fa-user-graduate"></i>{" "}
               </span>
-              <span class="icons-span">
-                <i class="fas fa-user-graduate"></i>{" "}
-              </span>
             </div>
             <div className="d-flex flex-column bg-white">
               <span
@@ -205,18 +201,6 @@ export default function App() {
               </span>
               <span
                 className={
-                  programmings === false
-                    ? "resume-options-items"
-                    : " selected resume-options-items"
-                }
-                onClick={() => {
-                  ChangeState(setprogrammings, true);
-                }}
-              >
-                Programming
-              </span>
-              <span
-                className={
                   projects === false
                     ? "resume-options-items"
                     : " selected resume-options-items"
@@ -232,7 +216,6 @@ export default function App() {
           <div className="col-lg-8 col-md-8 resume-right-section">
             {education === true && <Education />}
             {workhistory === true && <Work />}
-            {programmings === true && <Programming />}
             {projects === true && <Projects />}
           </div>
         </div>

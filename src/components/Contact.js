@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./contact.css";
+import "../assests/contact.css";
 
 export default function Contact() {
   const [name, setname] = useState("");
