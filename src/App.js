@@ -1,10 +1,10 @@
-import Education from "./Education";
+import Education from "./components/Education";
 import Programming from "./Progamming";
 import Projects from "./Projects";
 import Work from "./Work";
 import "./styles.css";
 import { useState } from "react";
-import Contact from "./Contact";
+import Contact from "./components/Contact";
 export default function App() {
   const [education, seteducation] = useState(true);
   const [workhistory, setworkhistory] = useState(false);
