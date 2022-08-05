@@ -2,7 +2,7 @@ import Education from "./components/Education";
 import Programming from "./Progamming";
 import Projects from "./Projects";
 import Work from "./Work";
-import "./styles.css";
+import "./assests/styles.css";
 import { useState } from "react";
 import Contact from "./components/Contact";
 export default function App() {
