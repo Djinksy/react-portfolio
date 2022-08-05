@@ -6,33 +6,33 @@ export default function Projects() {
       <div className="d-flex flex-column">
         <div className="education-one my-4 justify-content-between d-flex flex-row">
           <div className="d-flex flex-column new-one">
-            <span className="university-name">Carbon Emission Tracker</span>
+            <a href="https://github.com/FryGit87/Emissions-Tracker" className="university-name">Carbon Emission Tracker</a>
             <span className="university-degree">
               HTML, CSS, Javascript, GoogleFonts, APIs
             </span>
           </div>
           <div>
-            <span className="year-finished">icons needed</span>
+            <span className="year-finished">2022</span>
           </div>
         </div>
         <div className="education-one my-4 justify-content-between d-flex flex-row">
           <div className="d-flex flex-column new-one">
-            <span className="university-name"> Code Quiz</span>
-            <span className="university-degree">HTML, CSS, Javascript</span>
+            <a href="https://aqueous-headland-34654.herokuapp.com/" className="university-name"> Note Taker </a>
+            <span className="university-degree">HTML, CSS, Javascript, Node.js</span>
           </div>
           <div>
-            <span className="year-finished">icons needed</span>
+            <span className="year-finished">2022</span>
           </div>
         </div>
         <div className="education-one my-4 justify-content-between d-flex flex-row">
           <div className="d-flex flex-column new-one">
-            <span className="university-name"> GamerHub</span>
+            <a href="https://gamer-hub-group1.herokuapp.com/" className="university-name"> GamerHub</a>
             <span className="university-degree">
               HTML, CSS, Javascript, Handlebars, Node.js, Express.js, SASS{" "}
             </span>
           </div>
           <div>
-            <span className="year-finished">icons needed</span>
+            <span className="year-finished">2022</span>
           </div>
         </div>
       </div>
