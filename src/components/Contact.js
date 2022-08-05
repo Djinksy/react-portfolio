@@ -1,11 +1,33 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from 'emailjs-com';
+import { init } from "emailjs-com";
 import "../assests/contact.css";
+init("iuEmCaVstEg7xFc_e");
 
 export default function Contact() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
+  const form = useRef();
   const [message, setmessage] = useState("");
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(form.current);
+
+    const templateparms = {
+      from_name: name + " " + email,
+      to_name: "damienjinks39@gmail.com",
+      feedback: message
+    };
+    emailjs.send("service_y5ngvzi", "template_qz3d26f", templateparms ).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  };
   return (
     <>
       <div>
@@ -25,7 +47,7 @@ export default function Contact() {
           </div>
 
           <div className="col-lg-6 col-md-5 col-sm-12 auto">
-            <div className="d-flex flex-column card-contact-right">
+            <form ref={form} className="d-flex flex-column card-contact-right" onSubmit={sendEmail}>
               <div className="input-group my-3 d-flex flex-column">
                 <label> Name </label>
                 <input
@@ -63,9 +85,9 @@ export default function Contact() {
                 />
               </div>
               <div className="input-group my-3 d-flex flex-column">
-                <button className="btn btn-success">Send Message</button>
+                <input className="btn btn-success" type="submit" value="Send Message"/>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

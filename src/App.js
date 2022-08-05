@@ -7,13 +7,11 @@ import Contact from "./components/Contact";
 export default function App() {
   const [education, seteducation] = useState(true);
   const [workhistory, setworkhistory] = useState(false);
-  const [programmings, setprogrammings] = useState(false);
   const [projects, setprojects] = useState(false);
   const [opennav, setopennav] = useState(false);
   function SetAllFalse() {
     seteducation(false);
     setworkhistory(false);
-    setprogrammings(false);
     setprojects(false);
   }
 
