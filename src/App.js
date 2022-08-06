@@ -4,6 +4,7 @@ import Work from "./components/Work";
 import "./assests/styles.css";
 import { useState } from "react";
 import Contact from "./components/Contact";
+import Socials from "./components/Socials"
 export default function App() {
   const [education, seteducation] = useState(true);
   const [workhistory, setworkhistory] = useState(false);
@@ -226,7 +227,7 @@ export default function App() {
           <Contact />
         </div>
       </div>
-
+        <Socials />
      </div>
     
   );
