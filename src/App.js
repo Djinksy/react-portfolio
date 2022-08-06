@@ -226,6 +226,8 @@ export default function App() {
           <Contact />
         </div>
       </div>
-    </div>
+
+     </div>
+    
   );
 }
